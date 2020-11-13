@@ -339,8 +339,9 @@ fill: var(--accent-cl);
 .wedo .title {
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--primary-text-color);
+    color: var(--black);
     font-weight: 700;
+    font-family: Roboto;
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
@@ -365,7 +366,7 @@ fill: var(--accent-cl);
     text-align: center;
     text-transform: uppercase;
     background-color: rgba(47, 48, 58, 0.8);
-    color: #ffffff;
+    color: var(--white);
 }
 
 .container.team-padding {
