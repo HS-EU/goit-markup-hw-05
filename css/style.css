@@ -326,7 +326,10 @@ fill: var(--accent-cl);
 .wedo .list-margin {
     margin-top: 50px;
     display: flex;
-    padding-left: 0;
+}
+
+.list-margin .item-img {
+    position: relative;
 }
 
 .list-margin .item-img:not(:last-child) {
@@ -334,8 +337,9 @@ fill: var(--accent-cl);
 }
 
 .wedo .title {
-    color: var(--black);
-    font-family: Roboto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--primary-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -344,7 +348,24 @@ fill: var(--accent-cl);
 
 .img-block {
     display: block;
-    justify-content: center;
+}
+
+.wedo .wedo-content {
+    position: absolute;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 100%;
+    font-weight: 700;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: #ffffff;
 }
 
 .container.team-padding {
