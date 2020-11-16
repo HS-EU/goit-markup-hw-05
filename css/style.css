@@ -649,6 +649,9 @@ fill: var(--accent-cl);
     background: #f5f4fa;
     border-radius: 4px;
     border: 0;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter .link-filter:hover,
@@ -675,13 +678,72 @@ fill: var(--accent-cl);
     margin-top: 30px;
 }
 
+.content .type {
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding-left: 24px;
+    color: var(--main-text-cl);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.content-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content-overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+}
+
+.content .link:hover .content-overlay::before,
+.content .link:focus .content-overlay::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-overlay > .description {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-size: 18px;
+    line-height: 1.555;
+    color: var(--white);
+    font-family: Roboto;
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+}
+
+.content .link:hover .description,
+.content .link:focus .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .content{
     justify-content: space-between;
 }
 
 .content .link {
     display: block;
-    background: var(--primary-bg);
+    background: var(--white);
     text-decoration: none;
     padding-bottom: 20px;
 }
@@ -748,5 +810,10 @@ fill: var(--accent-cl);
 
 .social-icons-link:hover,
 .social-icons-link:focus {
+    background-color: var(--accent-cl);
+}
+
+.wedo .item-img:hover,
+.wedo .item-img:focus {
     background-color: var(--accent-cl);
 }
